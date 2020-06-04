@@ -18,5 +18,9 @@ export default {
   },
   postEvent(event) {
     return apiClient.post('/events', event)
+  },
+  // eslint-disable-next-line no-dupe-keys
+  getEvents(perPage, page) {
+    return apiClient.get('/events?_limit=' + perPage + '&_page=' + page)
   }
 }
