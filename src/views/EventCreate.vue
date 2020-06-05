@@ -1,46 +1,46 @@
 <template>
   <div>
-    <h1>Create an Event</h1>
+    <h1>写下✍今日安排吧</h1>
     <form @submit.prevent="createEvent">
-      <label>Select a category</label>
+      <label>电协部门😀</label>
       <select v-model="event.category">
         <option v-for="cat in categories"
                 :key="cat">{{ cat }}</option>
       </select>
 
-      <h3>Name & describe your event</h3>
+      <h3>日志名字👳‍♂️相关描述</h3>
       <div class="field">
-        <label>Title</label>
+        <label>标题 </label>
         <input v-model="event.title"
                type="text"
                placeholder="Add an event title" />
       </div>
 
       <div class="field">
-        <label>Description</label>
+        <label>详情 </label>
         <input v-model="event.description"
                type="text"
                placeholder="Add a description" />
       </div>
 
-      <h3>Where is your event?</h3>
+      <h3>所在( ఠൠఠ )ﾉ地方</h3>
       <div class="field">
-        <label>Location</label>
+        <label>地点😀</label>
         <input v-model="event.location"
                type="text"
                placeholder="Add a location" />
       </div>
 
-      <h3>When is your event?</h3>
+      <h3>案发(●ˇ∀ˇ●)事件</h3>
 
       <div class="field">
-        <label>Date</label>
+        <label>日期🥨</label>
         <datepicker v-model="event.date"
                     placeholder="Select a date" />
       </div>
 
       <div class="field">
-        <label>Select a time</label>
+        <label>时间🚵‍♂️</label>
         <select v-model="event.time">
           <option v-for="time in times"
                   :key="time">{{ time }}</option>
